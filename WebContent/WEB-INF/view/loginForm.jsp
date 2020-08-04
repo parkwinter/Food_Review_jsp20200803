@@ -18,6 +18,7 @@
   <style>
   html, body {
   height: 100%;
+  background-color : white;
 }
 
 body {
@@ -27,7 +28,7 @@ body {
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
-  background-color: #f5f5f5;
+  background-color: white;
 }
 
 .form-signin {
@@ -89,8 +90,12 @@ body {
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" name="password" class="form-control" placeholder="Password" required>
   <c:if test="${errors.password }">암호를 입력하세요.</c:if> 
-  <c:if test="${errors.idOrPwNotMatch }">아이디와 암호가 일치하지 않습니다.</c:if>
-						
+  <c:if test="${errors.idOrPwNotMatch }">
+ <div class="alert alert-danger" role="alert">
+  아이디와 암호가 일치하지 않습니다. </div> 
+ </c:if>
+
+ <p> <a href="main.do"> | HOME | </a> <a href="join.do"> SIGN UP | </a></p> 						
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   <p class="mt-5 mb-3 text-muted"> ㈜ 우아한형제들</p>
 </form>

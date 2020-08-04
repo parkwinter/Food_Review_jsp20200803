@@ -24,6 +24,8 @@
 	<a href="changePwd.do">[암호변경하기]</a>
 	<a href="${ctxPath }/article/write.do">글 작성</a>
 	<a href="${ctxPath }/article/list.do">[게시글 목록보기]</a>
+	<hr />
+	<a href="main.do">HOME 가기</a>
 </u:isLogin>
 
 <u:notLogin>

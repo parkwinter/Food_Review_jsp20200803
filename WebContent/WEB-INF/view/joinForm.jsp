@@ -21,13 +21,17 @@
 }
 
 body {
+
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
   align-items: center;
   padding-top: 40px;
   padding-bottom: 40px;
+  <%-- 
   background-color: #f5f5f5;
+  --%>
+  background-color: white;
 }
 
 .form-signin {
@@ -92,7 +96,10 @@ body {
   
   <label for="input1" class="sr-only">ID</label>
   <input type="text" name="id" class="form-control" value="${param.id }" placeholder="아이디" required autofocus>
-  <c:if test="${errors.id }">ID를 입력하세요.</c:if>
+  <c:if test="${errors.id }">
+  <div class="alert alert-danger" role="alert">
+ ID를 입력하세요. </div>
+  </c:if>
   <c:if test="${errors.duplicateId }">이미 사용중인 아이디입니다.</c:if>
   
   
@@ -110,8 +117,12 @@ body {
   <label for="input4" class="sr-only">Password2</label>
   <input type="password" name="confirmPassword" class="form-control" placeholder="비밀번호 확인" required>
   <c:if test="${errors.confirmPassword }">비밀번호 확인을 입력하세요.</c:if> 
-  <c:if test="${errors.notMatch }">암호와 확인이 일치하지 않습니다.</c:if>
-						
+  <c:if test="${errors.notMatch }">
+ <div class="alert alert-danger" role="alert">
+암호와 확인이 일치하지 않습니다. </div>   
+  </c:if>
+
+	<p> <a href="main.do"> | HOME | </a> <a href="login.do"> SIGN IN | </a></p> 							
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up!</button>
   <p class="mt-5 mb-3 text-muted"> ㈜ 우아한형제들</p>
 </form>

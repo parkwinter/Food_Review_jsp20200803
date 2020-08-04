@@ -5,6 +5,7 @@
 <%
 	request.setCharacterEncoding("utf-8");
 %>
+<%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -45,25 +46,14 @@
 <body>
 
 	<header>
-		<div class="collapse" style="background-color: #2AC0BC;" id="navbarHeader">
-			<div class="container">
-				<div class="row">
-					<div class="col-sm-8 col-md-7 py-4">
-						<h4 class="text-white">Food Review</h4>
-						<p class="text-black">로그인해야 리뷰작성이 가능합니다.</p>
-					</div>
-					<div class="col-sm-4 offset-md-1 py-4">
-
-						<ul class="list-unstyled">
-							<li><a href="join.do" class="text-white">SIGN UP</a></li>
-							<li><a href="login.do" class="text-white">SIGN IN</a></li>
-							<li><a href="#" class="text-white">MY PAGE</a></li>
-
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+	<c:if test = "${not empty sessionScope.authUser }">
+	<u:nav show = "show" comment = "${authUser.name } (${authUser.id })님 환영합니다." sitePath1="mypage.do" sitePath1_name1="MY PAGE" sitePath2="logout.do" sitePath2_name2="LOGOUT" />
+	</c:if>
+	
+	<c:if test ="${empty sessionScope.authUser }">
+	<u:nav comment = "로그인해야 리뷰작성이 가능합니다." sitePath1="join.do" sitePath1_name1="SIGN UP" sitePath2="login.do" sitePath2_name2="SIGN IN"/>
+	</c:if>
+	
 		<%--<div class="navbar navbar-dark bg-dark shadow-sm"> --%>
 		<div class="navbar navbar-light shadow-sm" style="background-color: #2AC0BC;">
 			<div class="container d-flex justify-content-between">
@@ -114,13 +104,17 @@
 					<br />
 					<div class="col-md-4">
 						<div>
+						<a href="fastfood.do">
 							<img src="/images/패스트푸드.jpg" alt="" />
+							</a>
 						</div>
 
 					</div>
 					<div class="col-md-4">
 						<div>
+						<a href="chicken.do">
 							<img src="/images/치킨.jpg" alt="" />
+							</a>
 						</div>
 
 					</div>

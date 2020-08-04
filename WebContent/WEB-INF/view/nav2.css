@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+#mymenu .active {
+	color : red;
+}
+
+h1, h2 {
+font-family: 'Do Hyeon', sans-serif;
+margin-top : 50px;
+
+}
