@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+h1 {
+	font-family: 'Do Hyeon', sans-serif;
+	
+}
+
+.col-md-4 {
+	text-align: center;
+	line-height : 200%;
+	padding : 30px;
+}
+
+ <%--max-width: 680px;--%>
+
+#chomchom {
+	max-width: 680px;
+}
+
+.page-footer{
+	background-color: #2AC0BC;
+}
+
+.marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+    margin-top : 100px;
+    
+}
+
+
+h1, h2 {
+font-family: 'Do Hyeon', sans-serif;
+margin-top : 50px;
+
+}
+
+.btn-secondary:hover{
+	background-color: #2AC0BC;
+}
+
+#mymenu .active a {
+	font-size : 25px;
+	font-family: 'Do Hyeon', sans-serif;
+	color : #980000;
+}
+
+#mymenu a {
+	color : #6c757d;
+}
+#mymenu a:hover {
+font-size : 25px;
+	font-family: 'Do Hyeon', sans-serif;
+	color : #980000;
+}
+
+
+
+
+.BHC_title {
+	text-align:center;
+	position:relative;z-index:2010;margin-top:-82px
+	
+	margin-top:-1px;padding-right:35px;padding-bottom:0 !important;padding-left:35px;
+	padding:30px 30px 14px
+	
+	
+}
+
+
+.bhc_name{
+	font-family: 'Do Hyeon', sans-serif;
+	text-align : center;
+	font-size:35px;line-height:36px
+margin-right:10px;font-size:32px;font-weight:bold;color:#000;line-height:40px
+}
+
+
+.category{font-size:16px;color:#9a9a9a;line-height:20px}
+
+
+.bhc_info{overflow:hidden;display:block;text-overflow:ellipsis;
+white-space:nowrap;display:inline-block;max-width:100%;vertical-align:top;text-align:left}
+
+
+.func_btn_area {
+	color : #2AC0BC;
+}
+
+
+
+
+
+
+.nav-tabs>li>a {
+    padding-top: 25px;
+    padding-bottom: 15px;
+}
+
+
+
+
+
+
+

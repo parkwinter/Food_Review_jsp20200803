@@ -16,6 +16,11 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Jua&display=swap"
 	rel="stylesheet">
+	
+	<link href="test.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+	
+	
 <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -25,13 +30,13 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <title>메인페이지</title>
 <style>
+<%--
 .col-md-4 {
 	text-align: center;
 	line-height : 200%;
 	padding : 30px;
 }
 
- <%--max-width: 680px;--%>
 
 #chomchom {
 	max-width: 680px;
@@ -40,7 +45,8 @@
 .page-footer{
 	background-color: #2AC0BC;
 }
-
+ --%>
+ <%--max-width: 680px;--%>
 </style>
 </head>
 <body>

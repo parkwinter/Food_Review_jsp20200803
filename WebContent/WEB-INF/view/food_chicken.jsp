@@ -16,11 +16,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
-
-<link href="/WEB-INF/view/nav2.css" rel="stylesheet">
+<link href="test.css" rel="stylesheet" type="text/css">
+	
+	
 
 <title>치킨</title>
 <style>
+<%--
 .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -53,6 +55,7 @@ font-size : 25px;
 	font-family: 'Do Hyeon', sans-serif;
 	color : #980000;
 }
+--%>
 
 </style>
 
@@ -78,6 +81,7 @@ font-size : 25px;
 		<center> 
 <h1>오늘은 치킨이닭!</h1>
 </center>
+
 <div class="container marketing">
 
     <!-- Three columns of text below the carousel -->
@@ -95,7 +99,7 @@ font-size : 25px;
         <p><i class="far fa-clock"></i>&nbsp;53~63분 | 배달팁 2,000원</p>
        <br />
        
-        <p><a class="btn btn-secondary" href="#" role="button">&nbsp; &nbsp; &nbsp; &nbsp; 자세히 &nbsp; &nbsp; &raquo; &nbsp; &nbsp;</a></p>
+        <p><a class="btn btn-secondary" href="bhc.do" role="button">&nbsp; &nbsp; &nbsp; &nbsp; 자세히 &nbsp; &nbsp; &raquo; &nbsp; &nbsp;</a></p>
       </div><!-- /.col-lg-4 -->
       
       
@@ -103,7 +107,7 @@ font-size : 25px;
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
         <h2>Heading</h2>
         <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+        <p><a class="btn btn-secondary" href="foodtest.do" role="button">View details &raquo;</a></p>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>

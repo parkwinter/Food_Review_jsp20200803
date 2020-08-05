@@ -16,42 +16,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	
-	<link href="navbar.css" rel="stylesheet">
+	<link href="test.css" rel="stylesheet">
 <title>패스트푸드</title>
 
 <style>
-.marketing .col-lg-4 {
-    margin-bottom: 1.5rem;
-    text-align: center;
-    margin-top : 100px;
-    
-}
 
-
-h1, h2 {
-font-family: 'Do Hyeon', sans-serif;
-margin-top : 50px;
-
-}
-
-.btn-secondary:hover{
-	background-color: #2AC0BC;
-}
-
-#mymenu .active a {
-	font-size : 25px;
-	font-family: 'Do Hyeon', sans-serif;
-	color : #980000;
-}
-
-#mymenu a {
-	color : #6c757d;
-}
-#mymenu a:hover {
-font-size : 25px;
-	font-family: 'Do Hyeon', sans-serif;
-	color : #980000;
-}
 
 </style>
 
