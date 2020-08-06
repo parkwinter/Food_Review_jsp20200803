@@ -43,7 +43,7 @@
 		<center>
 <h1>버거 먹자!</h1>
 
-<div class="container marketing">
+<div class="container marketing burgercon">
 
     <!-- Three columns of text below the carousel -->
     <div class="row">
@@ -56,7 +56,7 @@
         
         <h2>맘스터치 이대점</h2>
         <br />
-        <p>🌟 4.5 (100+) 최소주문 12,000</p>
+        <p>🌟 4.5 (100+) 최소주문 12,000원</p>
         <p><i class="far fa-clock"></i>&nbsp;44~54분 | 배달팁 0원~3,000원</p>
        <br />
        
@@ -65,23 +65,46 @@
       
       
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <%-- 
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+        --%>
+        <img src="/images/lotteria.png" alt="" style="border-radius:50%; width:140px; height:140px;"/>
+        
+        
+        <h2>롯데리아 이대점</h2>
+        <br />
+        <p>🌟 4.9 (100+) 최소주문 12,000원</p>
+        <p><i class="far fa-clock"></i>&nbsp;37~37분 | 배달팁 0원~3,000원</p>
+       <br />
+       
+        <p><a class="btn btn-secondary" href="#" role="button">&nbsp; &nbsp; &nbsp; &nbsp; 자세히 &nbsp; &nbsp; &raquo; &nbsp; &nbsp;</a></p>
       </div><!-- /.col-lg-4 -->
+      
       <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2>Heading</h2>
-        <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+      <%-- 
+        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: 140x140"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text>
+        --%>
+        <img src="/images/mommy2.jpg" alt="" style="border-radius:50%; width:140px; height:140px;"/>
+        
+        
+        <h2>수제버거 마미쿡 아현점</h2>
+        <br />
+        <p>🌟 4.5 (30+) 최소주문 8,000원</p>
+        <p><i class="far fa-clock"></i>&nbsp;44~54분 | 배달팁 1,000원~2,000원</p>
+       <br />
+       
+        <p><a class="btn btn-secondary" href="#" role="button">&nbsp; &nbsp; &nbsp; &nbsp; 자세히 &nbsp; &nbsp; &raquo; &nbsp; &nbsp;</a></p>
       </div><!-- /.col-lg-4 -->
+      
+      
     </div><!-- /.row -->
 
 
     
 
   </div><!-- /.container -->
+  
+  <u:footer />
 </center>
 </body>
 </html>

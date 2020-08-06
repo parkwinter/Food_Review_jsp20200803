@@ -152,6 +152,8 @@
 	
 	<hr />
 	
+	<u:footer />
+	<%-- 
 	<!-- Footer -->
 <footer class="page-footer font-small special-color-dark pt-4">
 
@@ -218,5 +220,6 @@
 
 </footer>
 <!-- Footer -->
+--%>
 </body>
 </html>
