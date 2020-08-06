@@ -113,3 +113,12 @@ white-space:nowrap;display:inline-block;max-width:100%;vertical-align:top;text-a
 .nav-tabs .active  {
 	background-color : #fafafa;
 }
+
+form .my-review {
+	padding-left : 15px;
+	padding-right : 15px;
+	padding-bottom : 15px;
+	padding-top : 10px;
+	
+	border-style : ridge;
+}
