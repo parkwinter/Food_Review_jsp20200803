@@ -118,7 +118,7 @@ height:57px;padding:20px 0;-webkit-box-sizing:border-box;box-sizing:border-box;c
 .sub_tab_area .list_item:not(:last-child):after{display:inline-block;width:1px;height:13px;margin:11px 14px 0;
 background-color:#e1e3e5;vertical-align:top;content:''}.sub_tab_area .tab{display:inline-block;line-height:35px}
 .sub_tab_area .tab.active{font-weight:bold;color:#03c75a}.sc_box{position:relative}.sc_box h3{margin-bottom:20px;
-font-size:20px;font-weight:bold}.sc_box h3 .count{display:inline-block;margin-top:1px;margin-left:6px;color:#03c75a;
+font-size:20px;font-weight:bold}.sc_box h3 .count{display:inline-block;margin-top:1px;margin-left:6px;color:#6c757d;
 font-family:arial,sans-serif;vertical-align:top}.sc_box .btn_sc_more{position:absolute;top:42px;right:0;color:#424242}
 .sc_box .btn_sc_more .icon{margin:5px 0 0 4px}.sc_box:last-child{margin-bottom:0;padding-bottom:60px !important}
 .sc_box+.sc_box{border-top:1px solid #ecf0f2}.inner_sc_box{padding-top:38px;padding-bottom:40px}

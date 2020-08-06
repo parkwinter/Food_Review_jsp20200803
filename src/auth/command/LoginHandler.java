@@ -53,7 +53,12 @@ public class LoginHandler implements CommandHandler {
 		try {
 			User user = loginService.login(id, password);
 			req.getSession().setAttribute("authUser", user);
+			
+			// 페이지 이전경로 : request.getHeader("referer");
+
+
 			res.sendRedirect(req.getContextPath() + "/main.do");
+			//res.sendRedirect(req.getHeader("referer"));
 			return null;
 		} catch (LoginFailException e) {
 			errors.put("idOrPwNotMatch",  true);

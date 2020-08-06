@@ -26,8 +26,12 @@
 	${authUser.name }님, 안녕하세요. <hr />
 	<a href="logout.do">[로그아웃하기]</a> <br /> 
 	<a href="changePwd.do">[암호변경하기]</a><br />
+	<%-- 
 	<a href="${ctxPath }/article/write.do">글 작성</a><br />
 	<a href="${ctxPath }/article/list.do">[게시글 목록보기]</a><br />
+	--%>
+	<a href="#">글 작성</a><br />
+	<a href="#">[게시글 목록보기]</a><br />
 	<hr />
 	<a href="main.do">HOME 가기</a>
 </u:isLogin>
