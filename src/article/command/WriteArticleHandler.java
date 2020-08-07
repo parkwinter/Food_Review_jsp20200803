@@ -15,7 +15,7 @@ import auth.service.User;
 import mvc.controller.CommandHandler;
 
 public class WriteArticleHandler implements CommandHandler {
-	private static final String FORM_VIEW = "/WEB-INF/view/newArticleForm.jsp";
+	private static final String FORM_VIEW = "/WEB-INF/view/writeReviewForm.jsp";
 	private WriteArticleService writeService = new WriteArticleService();
 	private WriteFileService writeFile = new WriteFileService();
 
@@ -46,8 +46,9 @@ public class WriteArticleHandler implements CommandHandler {
 
 		User user = (User) req.getSession(false)
 				.getAttribute("authUser");
-		WriteRequest writeReq = createWriteRequest(user, req,
-				fileName);
+		WriteRequest writeReq = createWriteRequest(user, req
+				,fileName
+				);
 		writeReq.validate(errors);
 
 		if (!errors.isEmpty()) {
@@ -65,7 +66,7 @@ public class WriteArticleHandler implements CommandHandler {
 
 		req.setAttribute("newArticleNo", newArticleNo);
 
-		return "/WEB-INF/view/newArticleSuccess.jsp";
+		return "/WEB-INF/view/writeReviewSuccess.jsp";
 
 	}
 
@@ -82,6 +83,7 @@ public class WriteArticleHandler implements CommandHandler {
 				new Writer(user.getId(), user.getName()),
 				req.getParameter("title"),
 				req.getParameter("content"),
+				req.getParameter("star"),
 				fileName);
 	}
 

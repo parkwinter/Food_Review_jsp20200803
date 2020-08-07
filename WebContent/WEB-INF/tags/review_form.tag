@@ -2,18 +2,18 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<form action="" method="post" enctype="multipart/form-data">
+<form action="write.do" method="post" enctype="multipart/form-data">
 
 <div class="my-review">
 
 <div class="form-group">
     <label for="exampleFormControlSelect1">별점</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>🌟🌟🌟🌟🌟 (5)</option>
-      <option>🌟🌟🌟🌟 (4)</option>
-      <option>🌟🌟🌟 (3)</option>
-      <option>🌟🌟 (2)</option>
-      <option>🌟 (1)</option>
+    <select class="form-control" id="exampleFormControlSelect1" name="star" }>
+      <option value="🌟🌟🌟🌟🌟 (5)" >🌟🌟🌟🌟🌟 (5)</option>
+      <option value="4">🌟🌟🌟🌟 (4)</option>
+      <option value="🌟🌟🌟 (3)">🌟🌟🌟 (3)</option>
+      <option value="2">🌟🌟 (2)</option>
+      <option value="🌟 (1)">🌟 (1)</option>
     </select>
   </div>
   

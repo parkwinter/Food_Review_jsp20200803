@@ -10,6 +10,8 @@ import article.model.ArticleContent;
 import jdbc.JdbcUtil;
 import jdbc.connection.ConnectionProvider;
 
+//게시글 쓰기 기능 제공
+
 public class WriteArticleService {
 	private ArticleDao articleDao = new ArticleDao();
 	private ArticleContentDao contentDao = new ArticleContentDao();
@@ -32,7 +34,7 @@ public class WriteArticleService {
 
 			ArticleContent content = new ArticleContent(
 					savedArticle.getNumber(),
-					req.getContent(), req.getFileName());
+					req.getContent(), req.getStar(), req.getFileName());
 
 			ArticleContent savedContent = contentDao.insert(conn,
 					content);

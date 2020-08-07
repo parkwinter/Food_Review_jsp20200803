@@ -3,16 +3,19 @@ package article.model;
 public class ArticleContent {
 	private Integer number;
 	private String content;
+	private String star;
 	private String fileName;
 
-	public ArticleContent(Integer number, String content) {
-		this(number, content, "");
-	}
 
+	public ArticleContent (Integer number, String content, String star) {
+		this(number,content,star,"");
+	}
+	
 	public ArticleContent(Integer number, String content,
-			String fileName) {
+			String star, String fileName) {
 		this.number = number;
 		this.content = content;
+		this.star = star;
 		this.fileName = fileName;
 	}
 
@@ -24,8 +27,12 @@ public class ArticleContent {
 		return number;
 	}
 
+	public String getStar() {
+		return star;
+	}
 	public String getFileName() {
 		return fileName;
 	}
+
 
 }
