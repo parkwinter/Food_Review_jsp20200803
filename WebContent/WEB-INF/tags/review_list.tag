@@ -3,13 +3,14 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
 
+<%-- 
 <div class="sc_box receipt_review receipt_review_tab review_area">
 
 
 <ul class = "list_receipt_review1">
 <li class="list_item no_img1">
 <div class="info_area1">
-
+--%>
 
 
 <div class="media">
