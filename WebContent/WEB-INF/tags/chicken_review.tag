@@ -37,8 +37,9 @@
 
 
 
+<u:review_list />
 
-
+<%-- 
 
 <div class="sc_box receipt_review receipt_review_tab review_area">
 <ul class = "list_receipt_review">
@@ -73,7 +74,7 @@
 
 
 
-
+--%>
 
 
 
@@ -83,3 +84,4 @@
 </div>
 
 </div>
+
