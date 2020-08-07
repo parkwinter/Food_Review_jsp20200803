@@ -166,6 +166,8 @@
 
 <u:chicken_review id="nav-profile" />
 
+<u:content1 id="nav-contact" />
+
 </div>
 
 <%--

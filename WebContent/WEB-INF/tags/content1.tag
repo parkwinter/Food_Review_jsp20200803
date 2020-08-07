@@ -5,6 +5,6 @@
 <%@ attribute name="id" required="true"%>
 <%@ attribute name="className" %>
 
-<div class="tab-pane fade ${className }" id="${id }" role="tabpanel" aria-labelledby="nav-home-tab">
+<div class="tab-pane fade ${className }" id="${id }" role="tabpanel" aria-labelledby="nav-contact-tab">
 <h1>여기는 menu 임시 페이지얌</h1>
 </div>

@@ -1,10 +1,12 @@
 <%@ tag language="java" pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@ attribute name="id" required="true"%>
+<%@ attribute name="className" %>
 
-<form action="write.do" method="post" enctype="multipart/form-data">
+<form action="bhcReview.do" method="post" enctype="multipart/form-data"  >
 
-<div class="my-review">
+<div class="my-review  ${className }" id="${id }  aria-labelledby="writereview">
 
 <div class="form-group">
     <label for="exampleFormControlSelect1">별점</label>

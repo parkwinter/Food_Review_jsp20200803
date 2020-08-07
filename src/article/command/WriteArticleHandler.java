@@ -15,7 +15,8 @@ import auth.service.User;
 import mvc.controller.CommandHandler;
 
 public class WriteArticleHandler implements CommandHandler {
-	private static final String FORM_VIEW = "/WEB-INF/view/writeReviewForm.jsp";
+	private static final String FORM_VIEW = "/WEB-INF/view/chicken_bhc.jsp";
+	//private static final String FORM_VIEW = "/WEB-INF/view/writeReviewForm.jsp";
 	private WriteArticleService writeService = new WriteArticleService();
 	private WriteFileService writeFile = new WriteFileService();
 

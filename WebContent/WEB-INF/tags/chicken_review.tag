@@ -16,11 +16,14 @@
 
 
 <c:if test = "${not empty sessionScope.authUser }">	
-<p style="color:#6c757d; "><a class="btn btn-secondary" href="#" id="writereview" role="button">&nbsp; &nbsp; &nbsp; &nbsp; 리뷰쓰기 &nbsp; &nbsp; &raquo; &nbsp; &nbsp;</a>
+<p style="color:#6c757d; ">
+<a class="btn btn-secondary" href="#review" id="writereview" role="button" data-toggle="button" aria-pressed="false">
+&nbsp; &nbsp; &nbsp; &nbsp; 리뷰쓰기 &nbsp; &nbsp; &raquo; &nbsp; &nbsp;</a>
 &nbsp;&nbsp;---- &nbsp;${authUser.name } (${authUser.id })님 리뷰를 작성해보세요! </p>
 <br />
 
-<u:review_form />
+<u:review_form id="review"/>
+
 </c:if>
 
 
