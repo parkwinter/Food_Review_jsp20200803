@@ -13,7 +13,9 @@
 --%>
 
 
-<div class="media">
+
+
+<div class="media" style="padding-top: 70px;">
   <img src="/images/photo.JPG" class="align-self-start mr-3" style="border-radius:50%; width:100px; height:100px;" alt="...">
   <div class="media-body">
     <strong class="text-gray-dark text-muted" style="font-size: 20px; font-family: 'Do Hyeon', sans-serif; color:gray;">pyj0**</strong>
@@ -37,6 +39,61 @@
 
 
 
+
+<c:forEach var="article" items="${articlePage.content }">
+
+	<div class="media" style="padding-top: 70px;">
+  <img src="/images/photo.JPG" class="align-self-start mr-3" style="border-radius:50%; width:100px; height:100px;" alt="...">
+  <div class="media-body">
+    <strong class="text-gray-dark text-muted" style="font-size: 20px; font-family: 'Do Hyeon', sans-serif; color:gray;">${article.writer.id }</strong>
+    <span class="d-block border-bottom border-gray" style="font-size : 15px; padding-bottom : 10px;"> <c:out value="${article.star }" />
+    
+    
+  <span class="item" style="color:gray;"> &nbsp; &nbsp; | &nbsp; 작성일자  &nbsp;${article.regDate }</span>
+    
+    <br/> </span>
+    
+    <p> <br /><c:out value="${article.content }" /> </p>
+    <span class="d-block border-bottom border-gray" >
+  <img src="/images/${article.number }/${article.fileName }" style="width: 300px; height:300px;" >
+  
+  
+  </span>
+  </div>
+</div>
+
+
+
+</c:forEach>
+
+	<div class="container mt-3">
+		<nav aria-label="Page navigation example">
+			<ul class="pagination justify-content-center">
+				<c:if test="${articlePage.startPage > 5 }">
+					<li class="page-item disabled"><a class="page-link"
+						href="${ctxPath }/article/list.do?pageNo=${articlPage.startPage-5 }"
+						tabindex="-1" aria-disabled="true">이전</a></li>
+				</c:if>
+				<c:forEach var="pNo" begin="${articlePage.startPage }"
+					end="${articlePage.endPage }">
+					<li class="page-item"><a class="page-link" href="${ctxPath }/article/list.do?pageNo=${pNo }">${pNo }</a></li>
+				</c:forEach>
+				<c:if test="${articlePage.endPage < articlePae.totalPages }">
+					<li class="page-item"><a class="page-link"
+						href="${ctxPath }/article/list.do?pageNo=${articlePage.startPage + 5 }">다음</a></li>
+				</c:if>
+			</ul>
+		</nav>
+
+
+	</div>
+
+
+
+
+
+
+		
 <%--
 <ul class = "list_receipt_review">
 <li class="list_item no_img">
@@ -72,8 +129,9 @@
 </li>
 
 </ul>
- --%>
  
  
  
 </div>
+
+ --%>

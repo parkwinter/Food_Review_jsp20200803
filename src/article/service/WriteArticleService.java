@@ -62,6 +62,10 @@ public class WriteArticleService {
 		return new Article(null,
 				req.getWriter(),
 				req.getTitle(),
-				now, now, 0);
+				now, now, 0,
+				req.getContent(),
+				req.getStar(),
+				req.getFileName()
+				);
 	}
 }

@@ -5,11 +5,13 @@ import javax.servlet.http.HttpServletResponse;
 
 import article.service.ArticlePage;
 import article.service.ListArticleService;
+import article.service.ReadArticleService;
 import mvc.controller.CommandHandler;
 
 public class ListArticleHandler implements CommandHandler {
 	private ListArticleService listService = new ListArticleService();
-
+	//private ReadArticleService readService = new ReadArticleService();
+	
 	@Override
 	public String process(HttpServletRequest req,
 			HttpServletResponse res) throws Exception {
@@ -24,6 +26,7 @@ public class ListArticleHandler implements CommandHandler {
 		ArticlePage articlePage = listService.getArticlePage(pageNo);
 		req.setAttribute("articlePage", articlePage);
 		
-		return "/WEB-INF/view/writeReviewSuccess.jsp";
+		
+		return "/WEB-INF/view/listArticle2.jsp";
 	}
 }

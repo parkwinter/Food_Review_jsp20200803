@@ -10,7 +10,59 @@ import jdbc.JdbcUtil;
 
 public class ArticleContentDao {
 	
+	public int delete(Connection conn, int no)
+			throws SQLException {
+		try (PreparedStatement pstmt = conn
+				.prepareStatement("DELETE FROM article_content "
+						+ " WHERE article_no=?")) {
+			pstmt.setInt(1, no);
+			return pstmt.executeUpdate();
+		}
+	}
 
+	
+	
+	public ArticleContent selectById(Connection conn, int no)
+			throws SQLException {
+
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			pstmt = conn.prepareStatement(
+					"SELECT * FROM article_content"
+							+ " WHERE article_no=?");
+			pstmt.setInt(1, no);
+			rs = pstmt.executeQuery();
+			ArticleContent content = null;
+			if (rs.next()) {
+				content = new ArticleContent(
+						rs.getInt("article_no"),
+						rs.getString("content"), 
+						rs.getString("file_name"));
+
+			}
+
+			return content;
+
+		} finally {
+			JdbcUtil.close(rs, pstmt);
+		}
+	}
+
+	
+	public int update(Connection conn, int no, String content)
+			throws SQLException {
+		try (PreparedStatement pstmt = conn.prepareStatement(
+				"UPDATE article_content SET content=?"
+						+ "WHERE article_no=?")) {
+			pstmt.setString(1, content);
+			pstmt.setInt(2, no);
+			return pstmt.executeUpdate();
+		}
+	}
+	
+	
 	public ArticleContent insert(Connection conn,
 			ArticleContent content) throws SQLException {
 

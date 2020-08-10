@@ -108,7 +108,11 @@ public class ArticleDao {
 				rs.getString("title"),
 				toDate(rs.getTimestamp("regdate")),
 				toDate(rs.getTimestamp("moddate")),
-				rs.getInt("read_cnt"));
+				rs.getInt("read_cnt"),
+				rs.getString("content"),
+				rs.getString("star"),
+				rs.getString("file_name"))
+				;
 	}
 	
 	private Date toDate(Timestamp timestamp) {
@@ -126,8 +130,8 @@ public class ArticleDao {
 			pstmt = conn.prepareStatement("INSERT INTO "
 					+ " article "
 					+ " (writer_id, writer_name, title, "
-					+ "  regdate, moddate, read_cnt) "
-					+ " VALUES (?, ?, ?, ?, ?, 0) ");
+					+ "  regdate, moddate, read_cnt, content, star, file_name) "
+					+ " VALUES (?, ?, ?, ?, ?, 0,?,?,?) ");
 			pstmt.setString(1, article.getWriter().getId());
 			pstmt.setString(2, article.getWriter().getName());
 			pstmt.setString(3, article.getTitle());
@@ -135,6 +139,9 @@ public class ArticleDao {
 					toTimestamp(article.getRegDate()));
 			pstmt.setTimestamp(5,
 					toTimestamp(article.getModifiedDate()));
+			pstmt.setString(6, article.getContent());
+			pstmt.setString(7, article.getStar());
+			pstmt.setString(8, article.getFileName());
 			int insertedCount = pstmt.executeUpdate();
 
 			if (insertedCount > 0) {
@@ -148,7 +155,11 @@ public class ArticleDao {
 							article.getWriter(),
 							article.getTitle(),
 							article.getRegDate(),
-							article.getModifiedDate(), 0);
+							article.getModifiedDate(), 0,
+							article.getContent(),
+							article.getStar(),
+							article.getFileName()
+							);
 				}
 			}
 

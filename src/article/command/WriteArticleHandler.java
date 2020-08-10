@@ -15,10 +15,12 @@ import auth.service.User;
 import mvc.controller.CommandHandler;
 
 public class WriteArticleHandler implements CommandHandler {
-	private static final String FORM_VIEW = "/WEB-INF/view/chicken_bhc.jsp";
+	private static final String FORM_VIEW = "/WEB-INF/view/listArticle2.jsp";
 	//private static final String FORM_VIEW = "/WEB-INF/view/writeReviewForm.jsp";
 	private WriteArticleService writeService = new WriteArticleService();
 	private WriteFileService writeFile = new WriteFileService();
+	
+	
 
 	@Override
 	public String process(HttpServletRequest req,
@@ -67,7 +69,10 @@ public class WriteArticleHandler implements CommandHandler {
 
 		req.setAttribute("newArticleNo", newArticleNo);
 
-		return "/WEB-INF/view/writeReviewSuccess.jsp";
+//		return "/WEB-INF/view/writeReviewSuccess.jsp";
+		res.sendRedirect(req.getContextPath() + "/bhc.do");
+		return null;
+//		return FORM_VIEW;
 
 	}
 

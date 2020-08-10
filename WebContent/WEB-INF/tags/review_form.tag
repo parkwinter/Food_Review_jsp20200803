@@ -4,7 +4,7 @@
 <%@ attribute name="id" required="true"%>
 <%@ attribute name="className" %>
 
-<form action="bhcReview.do" method="post" enctype="multipart/form-data"  >
+<form action="bhc2.do" method="post" enctype="multipart/form-data"  >
 
 <div class="my-review  ${className }" id="${id }  aria-labelledby="writereview">
 
@@ -12,9 +12,9 @@
     <label for="exampleFormControlSelect1">별점</label>
     <select class="form-control" id="exampleFormControlSelect1" name="star" }>
       <option value="🌟🌟🌟🌟🌟 (5)" >🌟🌟🌟🌟🌟 (5)</option>
-      <option value="4">🌟🌟🌟🌟 (4)</option>
+      <option value="🌟🌟🌟🌟 (4)">🌟🌟🌟🌟 (4)</option>
       <option value="🌟🌟🌟 (3)">🌟🌟🌟 (3)</option>
-      <option value="2">🌟🌟 (2)</option>
+      <option value="🌟🌟 (2)">🌟🌟 (2)</option>
       <option value="🌟 (1)">🌟 (1)</option>
     </select>
   </div>

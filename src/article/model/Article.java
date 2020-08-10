@@ -11,8 +11,13 @@ public class Article {
 	private Date modifiedDate;
 	private int readCount;
 	
+	private String content;
+	private String star;
+	private String fileName;
+	
+	
 	public Article(Integer number, Writer writer, String title,
-			Date regDate, Date modifiedDate, int readCount) {
+			Date regDate, Date modifiedDate, int readCount, String content, String star, String fileName) {
 		super();
 		this.number = number;
 		this.writer = writer;
@@ -20,6 +25,9 @@ public class Article {
 		this.regDate = regDate;
 		this.modifiedDate = modifiedDate;
 		this.readCount = readCount;
+		this.content = content;
+		this.star = star;
+		this.fileName = fileName;
 	}
 	public Integer getNumber() {
 		return number;
@@ -40,5 +48,16 @@ public class Article {
 		return readCount;
 	}
 	
-	
+	public String getContent() {
+		return content;
+	}
+
+
+	public String getStar() {
+		return star;
+	}
+	public String getFileName() {
+		return fileName;
+	}
+
 }

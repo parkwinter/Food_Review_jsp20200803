@@ -18,8 +18,8 @@
 <title>리뷰작성페이지</title>
 </head>
 <body>
-
+<%-- 
 <u:review_form />
-
+--%>
 </body>
 </html>
