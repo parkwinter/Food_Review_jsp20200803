@@ -14,7 +14,7 @@
 
 
 
-
+<%-- 
 <div class="media" style="padding-top: 70px;">
   <img src="/images/photo.JPG" class="align-self-start mr-3" style="border-radius:50%; width:100px; height:100px;" alt="...">
   <div class="media-body">
@@ -36,7 +36,7 @@
 </div>
 
 
-
+--%>
 
 
 
@@ -55,7 +55,7 @@
     
     <p> <br /><c:out value="${article.content }" /> </p>
     <span class="d-block border-bottom border-gray" >
-  <img src="/images/${article.number }/${article.fileName }" style="width: 300px; height:300px;" >
+  <img src="/images/${article.number }/${article.fileName }" style="width: 100px; height:100px;" >
   
   
   </span>
@@ -71,16 +71,16 @@
 			<ul class="pagination justify-content-center">
 				<c:if test="${articlePage.startPage > 5 }">
 					<li class="page-item disabled"><a class="page-link"
-						href="${ctxPath }/article/list.do?pageNo=${articlPage.startPage-5 }"
+						href="${ctxPath }/bhc.do?pageNo=${articlPage.startPage-5 }"
 						tabindex="-1" aria-disabled="true">이전</a></li>
 				</c:if>
 				<c:forEach var="pNo" begin="${articlePage.startPage }"
 					end="${articlePage.endPage }">
-					<li class="page-item"><a class="page-link" href="${ctxPath }/article/list.do?pageNo=${pNo }">${pNo }</a></li>
+					<li class="page-item"><a class="page-link" href="${ctxPath }/bhc.do?pageNo=${pNo }">${pNo }</a></li>
 				</c:forEach>
 				<c:if test="${articlePage.endPage < articlePae.totalPages }">
 					<li class="page-item"><a class="page-link"
-						href="${ctxPath }/article/list.do?pageNo=${articlePage.startPage + 5 }">다음</a></li>
+						href="${ctxPath }/bhc.do?pageNo=${articlePage.startPage + 5 }">다음</a></li>
 				</c:if>
 			</ul>
 		</nav>
