@@ -54,7 +54,7 @@
     <br/> </span>
     
     <p> <br /><c:out value="${article.content }" /> </p>
-    <span class="d-block border-bottom border-gray" >
+    <span class="d-block border-bottom border-gray" style="padding-bottom: 30px;">
     
     
     <c:if test="${not empty article.fileName }"> 
@@ -63,6 +63,7 @@
   </c:if>
   
   </span>
+
   </div>
 </div>
 
