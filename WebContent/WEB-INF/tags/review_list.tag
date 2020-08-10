@@ -55,8 +55,12 @@
     
     <p> <br /><c:out value="${article.content }" /> </p>
     <span class="d-block border-bottom border-gray" >
+    
+    
+    <c:if test="${not empty article.fileName }"> 
+    
   <img src="/images/${article.number }/${article.fileName }" style="width: 100px; height:100px;" >
-  
+  </c:if>
   
   </span>
   </div>
