@@ -173,13 +173,15 @@ public class ArticleDao {
 		return new Timestamp(date.getTime());
 	}
 
-	public int update(Connection conn, int no, String title)
+	public int update(Connection conn, int no, String title, String content, String star)
 			throws SQLException {
 		try (PreparedStatement pstmt = conn.prepareStatement(
-				"UPDATE article SET title=?, moddate=now()"
+				"UPDATE article SET title=?, content=?, star=?, moddate=now()"
 						+ " WHERE article_no=?")) {
 			pstmt.setString(1, title);
-			pstmt.setInt(2, no);
+			pstmt.setString(2, content);
+			pstmt.setString(3,  star);
+			pstmt.setInt(4, no);
 			return pstmt.executeUpdate();
 		}
 	}

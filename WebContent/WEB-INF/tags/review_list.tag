@@ -49,7 +49,9 @@
     <span class="d-block border-bottom border-gray" style="font-size : 15px; padding-bottom : 10px;"> <c:out value="${article.star }" />
      <span class="item" style="color:gray;">&nbsp; &nbsp; | </span>
    <span class="item" style="color:black;">  &nbsp; 제목 :   &nbsp;${article.title }</span>
-  <span class="item" style="color:gray;"> &nbsp; &nbsp; | &nbsp; 작성일자  &nbsp;${article.regDate }</span>
+  <span class="item" style="color:gray;"> &nbsp; &nbsp; | &nbsp; 작성일자  &nbsp;${article.regDate }
+   &nbsp; &nbsp; | &nbsp; No. ${article.number }
+  </span>
     
     <br/> 
     </span>
@@ -64,9 +66,20 @@
   </c:if>
   
   <br />
-  <a class="btn btn-outline-info btn-sm" href="modify.do?no=${articleData.article.number }">수정</a>
+  <%-- 
+ <c:if
+						test="${authUser.id == articleData.article.writer.id }">
+						<a class="btn btn-secondary" href="modify.do?no=${articleData.article.number }">수정</a>
+						<a class="btn btn-danger" href="delete.do?no=${articleData.article.number }">삭제</a>
+
+					</c:if>
+   --%>
+   <c:if test = "${not empty sessionScope.authUser }">	
+    <c:if test="${authUser.id == article.writer.id }">
+  <a class="btn btn-outline-info btn-sm" href="modify2.do?no=${article.number }">수정</a>
    <a class="btn btn-outline-danger btn-sm" href="delete.do?no=${articleData.article.number }">삭제</a>
-  
+  </c:if>
+    </c:if>
   </span>
 
   </div>
