@@ -47,11 +47,12 @@
   <div class="media-body">
     <strong class="text-gray-dark text-muted" style="font-size: 20px; font-family: 'Do Hyeon', sans-serif; color:gray;">${article.writer.id }</strong>
     <span class="d-block border-bottom border-gray" style="font-size : 15px; padding-bottom : 10px;"> <c:out value="${article.star }" />
-    
-    
+     <span class="item" style="color:gray;">&nbsp; &nbsp; | </span>
+   <span class="item" style="color:black;">  &nbsp; 제목 :   &nbsp;${article.title }</span>
   <span class="item" style="color:gray;"> &nbsp; &nbsp; | &nbsp; 작성일자  &nbsp;${article.regDate }</span>
     
-    <br/> </span>
+    <br/> 
+    </span>
     
     <p> <br /><c:out value="${article.content }" /> </p>
     <span class="d-block border-bottom border-gray" style="padding-bottom: 30px;">
@@ -59,8 +60,12 @@
     
     <c:if test="${not empty article.fileName }"> 
     
-  <img src="/images/${article.number }/${article.fileName }" style="width: 100px; height:100px;" >
+  <img src="/images/${article.number }/${article.fileName }" style="width: 100px; height:100px; border: 10px; margin:10px; margin-bottom : 20px;" >
   </c:if>
+  
+  <br />
+  <a class="btn btn-outline-info btn-sm" href="modify.do?no=${articleData.article.number }">수정</a>
+   <a class="btn btn-outline-danger btn-sm" href="delete.do?no=${articleData.article.number }">삭제</a>
   
   </span>
 
