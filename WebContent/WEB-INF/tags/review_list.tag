@@ -100,10 +100,15 @@
         <form action="delete.do?no=${delReq.articleNumber }" method="post">
         --%>
           <div class="form-group">
-            <label for="input1" class="col-form-label">비밀번호: (삭제할리뷰 : ${article.number })</label>
+            <label for="input1" class="col-form-label">비밀번호: </label>
             <input type="password" class="form-control" id="input1" name="password">
           </div>
          
+    
+    <p>
+    비밀번호를 입력하지 않거나, 틀리면  리뷰페이지로 돌아갑니다.
+   
+</p>
     
       </div>
       <div class="modal-footer">

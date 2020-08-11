@@ -20,8 +20,8 @@ import mvc.controller.CommandHandler;
 
 public class DeleteArticleHandler implements CommandHandler {
 
-	private static String FORM_VIEW = "/WEB-INF/view/deleteForm.jsp";
-//	private static String FORM_VIEW = null;
+//	private static String FORM_VIEW = "/WEB-INF/view/deleteForm.jsp";
+	private static String FORM_VIEW = null;
 	private DeleteArticleService deleteService = new DeleteArticleService();
 	private ReadArticleService readService = new ReadArticleService();
 
@@ -94,7 +94,9 @@ public class DeleteArticleHandler implements CommandHandler {
 		delReq.validate(errors);
 
 		if (!errors.isEmpty()) {
-			return FORM_VIEW;
+//			return FORM_VIEW;
+			res.sendRedirect(req.getContextPath() + "/bhc.do");
+			return null;
 		}
 
 		try {
@@ -110,7 +112,9 @@ public class DeleteArticleHandler implements CommandHandler {
 			res.sendError(HttpServletResponse.SC_FORBIDDEN);
 		} catch (InvalidPasswordException e) {
 			errors.put("invalidPassword", true);
-			return FORM_VIEW;
+//			return FORM_VIEW;
+			res.sendRedirect(req.getContextPath() + "/bhc.do");
+			return null;
 		}
 
 		return null;
