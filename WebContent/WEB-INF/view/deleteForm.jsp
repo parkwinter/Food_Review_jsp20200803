@@ -17,7 +17,9 @@
 </head>
 <body>
 <h1></h1>
-<form action="delete.do?no=${delReq.articleNumber }" method="post">
+
+너가 입력한 비밀번호 : <%= request.getParameter("password") %>
+<form action="del2.do?no=${delReq.articleNumber }" method="post">
 <p>
 암호 : <input type="password" name="password"/> <br />
 <c:if test="${errors.password }">암호을 입력하세요.</c:if>

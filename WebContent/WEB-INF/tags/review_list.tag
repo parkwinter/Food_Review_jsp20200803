@@ -77,13 +77,57 @@
    <c:if test = "${not empty sessionScope.authUser }">	
     <c:if test="${authUser.id == article.writer.id }">
   <a class="btn btn-outline-info btn-sm" href="modify2.do?no=${article.number }">수정</a>
-   <a class="btn btn-outline-danger btn-sm" href="delete.do?no=${articleData.article.number }">삭제</a>
+  <%-- 
+   <a class="btn btn-outline-danger btn-sm" href="del2.do?no=${article.number }">삭제</a>
+   --%>
+   
+  
+  
+   <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">삭제 </button>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">리뷰를 삭제하시겠습니까?</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      <form action="del.do?no=${article.number }" method="post">
+      <%-- 
+        <form action="delete.do?no=${delReq.articleNumber }" method="post">
+        --%>
+          <div class="form-group">
+            <label for="input1" class="col-form-label">비밀번호: (삭제할리뷰 : ${article.number })</label>
+            <input type="password" class="form-control" id="input1" name="password">
+          </div>
+         
+    
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
+        <input class="btn btn-danger" type="submit" value="삭제" >
+         </input>
+        <%-- 
+        <button type="button" class="btn btn-danger"> <a href="del.do?no=${article.number }">삭제하기</a></button>
+      --%>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+
   </c:if>
     </c:if>
   </span>
 
   </div>
 </div>
+
 
 
 
