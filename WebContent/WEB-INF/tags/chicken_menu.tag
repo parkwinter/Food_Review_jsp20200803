@@ -12,7 +12,7 @@
 
 <div id="${id }" class="tab_detail_area tab-pane fade ${className }" role="tabpanel" aria-labelledby="nav-home-tab" aria-expanded="true" aria-hidden="false">
 <div class="sc_box menu"><h3>BHC치킨 이대역점 메뉴<span class="count">42</span></h3>
-<a class="btn_sc_origin" href="javascript:void(0)" target="_self">메뉴판(원산지) 이미지로 보기</a>
+
 <div class="menu_area"><div class="image_menu_area"><div class="list_image_menu">
 <a class="list_item" href="javascript:void(0)" target="_self">
 <div class="thumb_area">

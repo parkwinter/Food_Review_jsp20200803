@@ -16,6 +16,24 @@ import jdbc.JdbcUtil;
 
 public class ArticleDao {
 	
+	public Article getById(Connection conn, Writer writer) throws SQLException {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		
+		try {
+			pstmt = conn.prepareStatement("select * from article where writer_id=?");
+			pstmt.setString(1, writer.getId());
+			rs = pstmt.executeQuery();
+			Article article = null;
+			if(rs.next()) {
+				article = convertArticle(rs);
+			}
+			return article;
+		}finally {
+			JdbcUtil.close(rs, pstmt);
+		}
+	}
+	
 	public int delete(Connection conn, int no)
 			throws SQLException {
 		try (PreparedStatement pstmt = conn

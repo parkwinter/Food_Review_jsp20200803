@@ -11,6 +11,9 @@ public class ArticleData {
 		this.article = article;
 		this.content = content;
 	}
+	public ArticleData(Article article) {
+		this.article = article;
+	}
 	
 	public Article getArticle() {
 		return article;

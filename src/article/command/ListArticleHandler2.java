@@ -1,0 +1,32 @@
+package article.command;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import article.service.ArticlePage;
+import article.service.ListArticleService;
+import article.service.ReadArticleService;
+import mvc.controller.CommandHandler;
+
+public class ListArticleHandler2 implements CommandHandler {
+	private ListArticleService listService = new ListArticleService();
+	//private ReadArticleService readService = new ReadArticleService();
+	
+	@Override
+	public String process(HttpServletRequest req,
+			HttpServletResponse res) throws Exception {
+	
+		String pageNoVal = req.getParameter("pageNo");
+		int pageNo = 1;
+		
+		if (pageNoVal != null) {
+			pageNo = Integer.parseInt(pageNoVal);
+		}
+		
+		ArticlePage articlePage = listService.getArticlePage(pageNo);
+		req.setAttribute("articlePage", articlePage);
+		
+		
+		return "/WEB-INF/view/getArticle.jsp";
+	}
+}
