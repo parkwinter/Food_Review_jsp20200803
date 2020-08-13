@@ -118,6 +118,31 @@ public class ArticleDao {
 		}
 	}
 
+	public List<Article> select2(Connection conn
+			) throws SQLException {
+
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+
+		try {
+			pstmt = conn
+					.prepareStatement("SELECT * FROM article "
+							+ " order by article_no desc ");
+			
+			
+
+			rs = pstmt.executeQuery();
+			List<Article> result = new ArrayList<>();
+			while (rs.next()) {
+				result.add(convertArticle(rs));
+			}
+			return result;
+
+		} finally {
+			JdbcUtil.close(rs, pstmt);
+		}
+	}
+	
 	private Article convertArticle(ResultSet rs)
 			throws SQLException {
 		return new Article(rs.getInt("article_no"),

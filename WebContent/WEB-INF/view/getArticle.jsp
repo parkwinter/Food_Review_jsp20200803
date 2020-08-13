@@ -25,7 +25,7 @@ ajkdjfkdjkdjkfj
 
 
 <h1> 어디야?</h1>
-<c:forEach var="article" items="${articlePage.content }">
+<c:forEach var="article" items="${articleNoPage.content }">
 
   <c:if test = "${not empty sessionScope.authUser }">	
     <c:if test="${authUser.id == article.writer.id }">
