@@ -4,7 +4,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib prefix="u" tagdir="/WEB-INF/tags" %>
 <% request.setCharacterEncoding("utf-8"); %>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,121 +15,154 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-<title>Insert title here</title>
+    
+    <link href="test.css" rel="stylesheet" type="text/css">
+    
+  <link href="mypagecss.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+	
+	
+<title>마이페이지</title>
+<style>
+
+</style>
 </head>
 <body>
-ajkdjfkdjkdjkfj
- 왜 안돼 개빡쵸
+
+
+<u:isLogin>
+<header>
+	<c:if test = "${not empty sessionScope.authUser }">
+	<u:nav show = "show" comment = "${authUser.name } (${authUser.id })님 환영합니다." sitePath1="mypage.do" sitePath1_name1="MY PAGE" sitePath2="logout.do" sitePath2_name2="LOGOUT" />
+	</c:if>
+	
+	<c:if test ="${empty sessionScope.authUser }">
+	<u:nav comment = "로그인해야 리뷰작성이 가능합니다." sitePath1="join.do" sitePath1_name1="SIGN UP" sitePath2="login.do" sitePath2_name2="SIGN IN"/>
+	</c:if>
+	
+		<%--<div class="navbar navbar-dark bg-dark shadow-sm"> --%>
+		<div class="navbar navbar-light shadow-sm" style="background-color: #2AC0BC;">
+			<div class="container d-flex justify-content-between">
+				<a href="main.do" class="navbar-brand d-flex align-items-center"> <i
+					class="fas fa-seedling"></i> <strong>&nbsp;Food Review</strong>
+				</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse"
+					data-target="#navbarHeader" aria-controls="navbarHeader"
+					aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+			</div>
+		</div>
+</header>
+
+
+
+   
+
+
+<div class="container"> 
+
  
-
-
-<h1> 어디야?</h1>
-<c:forEach var="article" items="${articleNoPage.content }">
-
-  <c:if test = "${not empty sessionScope.authUser }">	
-    <c:if test="${authUser.id == article.writer.id }">
-
-	<div class="media" style="padding-top: 70px;">
-  <img src="/images/photo.JPG" class="align-self-start mr-3" style="border-radius:50%; width:100px; height:100px;" alt="...">
-  <div class="media-body">
-    <strong class="text-gray-dark text-muted" style="font-size: 20px; font-family: 'Do Hyeon', sans-serif; color:gray;">${article.writer.id }</strong>
-    <span class="d-block border-bottom border-gray" style="font-size : 15px; padding-bottom : 10px;"> <c:out value="${article.star }" />
-     <span class="item" style="color:gray;">&nbsp; &nbsp; | </span>
-   <span class="item" style="color:black;">  &nbsp; 제목 :   &nbsp;${article.title }</span>
-  <span class="item" style="color:gray;"> &nbsp; &nbsp; | &nbsp; 작성일자  &nbsp;${article.regDate }
-   &nbsp; &nbsp; | &nbsp; No. ${article.number }
-  </span>
-    
-    <br/> 
-    </span>
-    
-    <p> <br /><c:out value="${article.content }" /> </p>
-    <span class="d-block border-bottom border-gray" style="padding-bottom: 30px;">
-    
-    
-    <c:if test="${not empty article.fileName }"> 
-    
-  <img src="/images/${article.number }/${article.fileName }" style="width: 100px; height:100px; border: 10px; margin:10px; margin-bottom : 20px;" >
-  </c:if>
-  
+ <br />
+  <h3 style="font-family:'Do Hyeon', sans-serif; "> &nbsp; 마이페이지 </h3>
   <br />
-  <%-- 
- <c:if
-						test="${authUser.id == articleData.article.writer.id }">
-						<a class="btn btn-secondary" href="modify.do?no=${articleData.article.number }">수정</a>
-						<a class="btn btn-danger" href="delete.do?no=${articleData.article.number }">삭제</a>
-
-					</c:if>
-   --%>
+<div class="row" > 
+ <nav>
+ 
+  <div class="nav flex-column nav-tabs mypagemenu" id="nav-tab" role="tablist" aria-orientation="vertical"  >
+    <a class="nav-link " id="nav-home-tab1" data-toggle="tab" href="#nav-home1" role="tab" aria-controls="nav-home1" aria-selected="true">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-home"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path><polyline points="9 22 9 12 15 12 15 22"></polyline></svg>
+              Home <span class="sr-only">(current)</span>
+   </a>
    
+    <a class="nav-link" id="nav-profile-tab1" data-toggle="tab" href="#nav-profile1" role="tab" aria-controls="nav-profile1" aria-selected="false">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+              암호 변경
+   </a>
    <%-- 
-   <c:if test = "${not empty sessionScope.authUser }">	
-    <c:if test="${authUser.id == article.writer.id }">
-    --%>
-    
-    
-  <a class="btn btn-outline-info btn-sm" href="modify2.do?no=${article.number }">수정</a>
-  <%-- 
-   <a class="btn btn-outline-danger btn-sm" href="del2.do?no=${article.number }">삭제</a>
+    <a class="nav-link" id="nav-contact-tab1" data-toggle="tab" href="#nav-contact1" role="tab" aria-controls="nav-contact1" aria-selected="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+          이름 변경 
+   </a>
+   
+     <a class="nav-link" id="nav-contact-tab11" data-toggle="tab" href="#nav-contact11" role="tab" aria-controls="nav-contact11" aria-selected="false">
+   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+             
+    내가 쓴 리뷰 
+   </a>
+   
+     <a class="nav-link" id="nav-profile-tab13" data-toggle="tab" href="#nav-profile13" role="tab" aria-controls="nav-profile13" aria-selected="false">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+              핸들러변경
+   </a>
    --%>
+     <a class="nav-link active" href="testlist.do" role="tab" aria-controls="nav-profile12" aria-selected="false">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+             
+    내가 쓴 리뷰
+   </a>
    
-  
-  
-   <button type="button" class="btn btn-outline-danger btn-sm" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo">삭제 </button>
+  </div>
+</nav>
+<div class="tab-content" id="nav-tabContent" style="padding-left:70px;">
+  <div class="tab-pane fade " id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab1">
+  <u:profile id="" />
+  <p>dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+  </div>
+  <div class="tab-pane fade" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab1">
+ <u:changePW id="" />
+ <p>dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+ </div>
+ <%-- 
+  <div class="tab-pane fade" id="nav-contact1" role="tabpanel" aria-labelledby="nav-contact-tab1">
+  <u:review_form id="" />
+  하 지친다ㅠ</div>
+  --%>
+  <div class="tab-pane fade" id="nav-contact11" role="tabpanel" aria-labelledby="nav-contact-tab11">
+  마지막!
+  <a href="testlist.do"> 여기!</a>
+  </div>
+  <div class="tab-pane fade show active" id="nav-profile13" role="tabpanel" aria-labelledby="nav-profile-tab13">
+ 
+ <u:getArticleTotal id="" />
+ <p>dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+ 
+</div>
+ </div> 
+ 
+<%--
+<main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
 
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">리뷰를 삭제하시겠습니까?</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form action="del.do?no=${article.number }" method="post">
-      <%-- 
-        <form action="delete.do?no=${delReq.articleNumber }" method="post">
-        --%>
-          <div class="form-group">
-            <label for="input1" class="col-form-label">비밀번호: </label>
-            <input type="password" class="form-control" id="input1" name="password">
-          </div>
-         
-    
-    <p>
-    비밀번호를 입력하지 않거나, 틀리면  리뷰페이지로 돌아갑니다.
-   
-</p>
+      <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Dashboard</h1>
     
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">취소</button>
-        <input class="btn btn-danger" type="submit" value="삭제" >
-         </input>
-        <%-- 
-        <button type="button" class="btn btn-danger"> <a href="del.do?no=${article.number }">삭제하기</a></button>
-      --%>
-      </div>
-      </form>
+
+<center>
+
+	${authUser.name }님, 안녕하세요. <hr />
+	<a href="logout.do">[로그아웃하기]</a> <br /> 
+	<a href="changePwd.do">[암호변경하기]</a><br />
+	<%-- 
+	<a href="${ctxPath }/article/write.do">글 작성</a><br />
+	<a href="${ctxPath }/article/list.do">[게시글 목록보기]</a><br />
+	
+	<a href="#">글 작성</a><br />
+	<a href="#">[게시글 목록보기]</a><br />
+	<hr />
+	<a href="main.do">HOME 가기</a>
+</center>
+	 --%>
+</u:isLogin>
+      
+      
+
+    </main>
+    
+    
+    
+    
+ 
     </div>
-  </div>
-</div>
-
-
-
-  </c:if>
-    </c:if>
-  </span>
-
-  </div>
-</div>
-
-
-
-
-</c:forEach>
-
-
 </body>
 </html>

@@ -45,7 +45,7 @@
 	<div class="media" style="padding-top: 70px;">
   <img src="/images/photo.JPG" class="align-self-start mr-3" style="border-radius:50%; width:100px; height:100px;" alt="...">
   <div class="media-body">
-    <strong class="text-gray-dark text-muted" style="font-size: 20px; font-family: 'Do Hyeon', sans-serif; color:gray;">${article.writer.id }</strong>
+    <strong class="text-gray-dark text-muted" style="font-size: 20px; font-family: 'Do Hyeon', sans-serif; color:gray;">${article.writer.id} ( ${article.writer.name} )</strong>
     <span class="d-block border-bottom border-gray" style="font-size : 15px; padding-bottom : 10px;"> <c:out value="${article.star }" />
      <span class="item" style="color:gray;">&nbsp; &nbsp; | </span>
    <span class="item" style="color:black;">  &nbsp; 제목 :   &nbsp;${article.title }</span>
@@ -56,7 +56,7 @@
     <br/> 
     </span>
     
-    <p> <br /><c:out value="${article.content }" /> </p>
+     <br /><c:out value="${article.content }" /> 
     <span class="d-block border-bottom border-gray" style="padding-bottom: 30px;">
     
     

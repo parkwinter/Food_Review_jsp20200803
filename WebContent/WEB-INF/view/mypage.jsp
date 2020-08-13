@@ -17,7 +17,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     
     <link href="test.css" rel="stylesheet" type="text/css">
-    <link href="mypagecss.css" rel="stylesheet" type="text/css">
+     <link href="mypagecss.css" rel="stylesheet" type="text/css">
 	<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 	
 	
@@ -83,22 +83,34 @@
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-users"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
           이름 변경 
    </a>
-   --%>
+  
      <a class="nav-link" id="nav-contact-tab11" data-toggle="tab" href="#nav-contact11" role="tab" aria-controls="nav-contact11" aria-selected="false">
    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
              
     내가 쓴 리뷰 
    </a>
+   
+     <a class="nav-link" id="nav-profile-tab13" data-toggle="tab" href="#nav-profile13" role="tab" aria-controls="nav-profile13" aria-selected="false">
+     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg>
+              핸들러변경
+   </a>
+    --%>
+     <a class="nav-link" href="testlist.do" role="tab" aria-controls="nav-profile12" aria-selected="false">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+             
+    내가 쓴 리뷰 
+   </a>
+   
   </div>
 </nav>
 <div class="tab-content" id="nav-tabContent" style="padding-left:70px;">
   <div class="tab-pane fade show active" id="nav-home1" role="tabpanel" aria-labelledby="nav-home-tab1">
   <u:profile id="" />
-  <p>dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+  <p class="whi">dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
   </div>
   <div class="tab-pane fade" id="nav-profile1" role="tabpanel" aria-labelledby="nav-profile-tab1">
  <u:changePW id="" />
- <p>dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+ <p class="whi">dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
  </div>
  <%-- 
   <div class="tab-pane fade" id="nav-contact1" role="tabpanel" aria-labelledby="nav-contact-tab1">
@@ -109,10 +121,14 @@
   마지막!
   <a href="testlist.do"> 여기!</a>
   </div>
+  <div class="tab-pane fade" id="nav-profile13" role="tabpanel" aria-labelledby="nav-profile-tab13">
+ <u:getArticle />
+ <p class="whi"">dskjfiejfksjdkfdsfdfdfddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd</p>
+ </div>
 </div>
  </div> 
  
-
+<%--
 <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
 
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
@@ -128,13 +144,14 @@
 	<%-- 
 	<a href="${ctxPath }/article/write.do">글 작성</a><br />
 	<a href="${ctxPath }/article/list.do">[게시글 목록보기]</a><br />
-	--%>
+	
 	<a href="#">글 작성</a><br />
 	<a href="#">[게시글 목록보기]</a><br />
 	<hr />
 	<a href="main.do">HOME 가기</a>
-</u:isLogin>
 </center>
+	 --%>
+</u:isLogin>
       
       
 
