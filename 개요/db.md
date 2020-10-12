@@ -1,3 +1,4 @@
+~~~
 use food;
 create table food.member(
 	memberid varchar(50) primary key,
@@ -58,3 +59,4 @@ where writer_id="a" order by article_no desc;
 delete from food.member where memberid = 'pyj078';
 delete from article where article_no='12';
 select version();
+~~~
